@@ -9,13 +9,8 @@ You must have installed Docker in your system. If you are using a Mac, the Docke
 ##### Installation
 Clone or download the code
 
-Run the following command inside the directory
-```
-docker-compose build && docker-compose up -d
-```
-
-##### Server settings
-You may specify the port you need to run the mongodb. Also you can sepcify the volume location if you nee persistant data each time when you spinup the docker
+**Set the settings requried**
+- You may specify the port you need to run the mongodb. Also you can sepcify the volume location if you nee persistant data each time when you spinup the docker
 docker-compose.yml
 ```
     ports:
@@ -23,4 +18,12 @@ docker-compose.yml
     volumes: 
         - ./data/mongo:/data/db
 ```
+- If you have specified a volumes, then share the host computer volume directory using Docker Desktop 
+Settings -> Resources -> File Sharing -> Add your host file directory
+
+Run the following command inside the directory
+```
+docker-compose build && docker-compose up -d
+```
+
 Your can then access the database server on localhost:27017
