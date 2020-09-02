@@ -1,5 +1,5 @@
 # Overview
-This is a simple docker file for you to spin up a mongodb server
+This is a simple docker file for you to spin up a MongoDB server
 
 ## Installation steps
 
