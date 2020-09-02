@@ -1,0 +1,14 @@
+version: '3'
+networks:
+  mongo:
+services:
+  mongo:
+    image: mongo:3.6.19-xenial
+    restart: always
+    container_name: mongo-default
+    ports:
+        - '27017:27017'
+    volumes: 
+        - ./data/mongo:/data/db
+    networks:
+      - mongo
